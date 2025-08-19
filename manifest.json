@@ -1,0 +1,19 @@
+{
+    "id": "advanced-search",
+    "name": "Advanced Search",
+    "version": "1.0.0",
+    "manifestURI": "",
+    "language": "typescript",
+    "type": "plugin",
+    "description": "Always use advanced search instead of basic search.",
+    "author": "SyntaxSama",
+    "icon": "https://raw.githubusercontent.com/SyntaxSama/advanced-search/refs/heads/main/2015046.png",
+    "website": "",
+    "lang": "EN",
+    "payloadURI": "https://raw.githubusercontent.com/SyntaxSama/advanced-search/refs/heads/main/advsearch.ts",
+    "plugin": {
+        "version": "1",
+        "permissions": {}
+    },
+    "isDevelopment": false
+}
