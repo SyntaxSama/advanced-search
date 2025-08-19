@@ -1,11 +1,16 @@
+/// <reference path="./plugin.d.ts" />
+
 function init() {
-    $ui.register(ctx => {
-        ctx.screen.onNavigate(e => {
-            console.log(e.pathname)
-            if (e.pathname === "/discover") {
-                ctx.screen.navigateTo("/search")
-                ctx.screen.reload()
-            }
-        })
-    })
+  $ui.register((ctx) => {
+    ctx.dom.onReady(() => {
+      ctx.dom.observe("div[data-headlessui-state='open']", async (elements) => {
+        for (const el of elements) {
+          el.remove();
+
+          ctx.screen.navigateTo("/search");
+          ctx.screen.reload();
+        }
+      });
+    });
+  });
 }
