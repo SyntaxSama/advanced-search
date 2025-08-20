@@ -5,10 +5,8 @@ function init() {
     ctx.dom.onReady(() => {
       ctx.dom.observe("div[data-headlessui-state='open']", async (elements) => {
         for (const el of elements) {
-          el.remove();
-
+          el.setProperty('className', 'hidden')
           ctx.screen.navigateTo("/search");
-          ctx.screen.reload();
         }
       });
     });
